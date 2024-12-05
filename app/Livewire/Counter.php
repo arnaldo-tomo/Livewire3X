@@ -2,48 +2,66 @@
 
 namespace App\Livewire;
 
+use App\Models\Produtos;
 use App\Models\User;
 use Livewire\Component;
 
 class Counter extends Component
 {
 
-    public $count = 1;
+    public $color="";
     public $id;
     public $name = '';
-    public $title = '';
+    public $category = '';
+    public $price = '';
 
-    public $content = '';
-    public function increment()
-    {
-        $this->count++;
-    }
+    public $search='';
+    public $user=[];
 
-    public function decrement()
-    {
-        $this->count--;
-    }
     public function render()
     {
-        $user = User::all();
-        return view('livewire.counter',['user' => $user]);
+        $this->user= Produtos::where('name', 'like', '%' . $this->search . '%')
+        ->orWhere('category', 'like', '%' . $this->search . '%')
+        ->get();
+        return view('livewire.counter');
     }
 
     public function delete($id)
     {
-      $user=  User::findOrFail($id);
-    //   $this->authorize('delete',$user);
-    $user->delete();
+      $user=  Produtos::findOrFail($id);
+      $user->delete();
 
-
-        session()->flash('sucess', 'Post successfully Deleted Successfully');
+      $this->clear();
+      session()->flash('message', 'Post successfully Deleted Successfully');
 
     }
 
 
-
-    public function save()
+    public function salvar()
     {
-        return $this->URl('dashboard');
+        $this->validate([
+            'color'=>'required',
+            'category'=>'required',
+            'name'=>'required',
+        ]);
+        Produtos::create([
+            'name' => $this->name,
+            'category' => $this->category,
+            'color'=>$this->color,
+            'price'=>$this->price,
+
+        ]);
+
+        $this->clear();
+
+        session()->flash('message','User created successfully');
+
+    }
+
+    public function clear(){
+        $this->color='';
+        $this->name='';
+        $this->category='';
+        $this->price='';
     }
 }
