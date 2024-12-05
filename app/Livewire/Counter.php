@@ -2,12 +2,14 @@
 
 namespace App\Livewire;
 
+use App\Models\User;
 use Livewire\Component;
 
 class Counter extends Component
 {
 
     public $count = 1;
+    public $id;
     public $name = '';
     public $title = '';
 
@@ -23,14 +25,19 @@ class Counter extends Component
     }
     public function render()
     {
-        return view('livewire.counter');
+        $user = User::all();
+        return view('livewire.counter',['user' => $user]);
     }
 
-    public function userSaverr()
+    public function delete($id)
     {
+      $user=  User::findOrFail($id);
+    //   $this->authorize('delete',$user);
+    $user->delete();
 
 
-        return $this->name;
+        session()->flash('sucess', 'Post successfully Deleted Successfully');
+
     }
 
 
