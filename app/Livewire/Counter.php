@@ -8,10 +8,10 @@ class Counter extends Component
 {
 
     public $count = 1;
-public $name='';
-public $title = '';
+    public $name = '';
+    public $title = '';
 
-public $content = '';
+    public $content = '';
     public function increment()
     {
         $this->count++;
@@ -26,7 +26,8 @@ public $content = '';
         return view('livewire.counter');
     }
 
-    public function userSaverr(){
+    public function userSaverr()
+    {
 
 
         return $this->name;
