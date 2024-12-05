@@ -32,7 +32,7 @@
                 <img id="background"  class=" absolute -left-20 top-30 max-w-[700px] max-h-screen" src="https://laravel.com/assets/img/welcome/background.svg" />
                 <div class="relative animate-bounce ">
                     {{-- <div class="absolute right-0 rounded-full bg-cyan-500 animate-pulse blur-xl w-80 h-80 top-10"></div> --}}
-                    <div class="absolute right-0 rounded-full  bg-[#ff2b202c] blur-3xl  animate-pulse w-[500px] h-[700px] top-10"></div>
+                    <div class="absolute right-0 rounded-full  bg-[#ff2b202c] blur-3xl  animate-pulse w-[900px] h-[600px] top-10"></div>
                     {{-- <div class="absolute right-0 rounded-full  bg-cyan-100 blur-3xl  animate-pulse w-[700px] h-[700px] top-10"></div> --}}
                 </div>
                 {{-- <img id="background"  class=" absolute -right-20 top-30 max-w-[700px] max-h-screen" src="https://laravel.com/assets/img/welcome/background.svg" /> --}}
