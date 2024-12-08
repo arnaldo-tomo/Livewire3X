@@ -18,6 +18,8 @@ class Counter extends Component
     public $search='';
     public $user=[];
 
+    public $isOpen=false;
+
     public function render()
     {
         $this->user= Produtos::where('name', 'like', '%' . $this->search . '%')
@@ -63,5 +65,14 @@ class Counter extends Component
         $this->name='';
         $this->category='';
         $this->price='';
+    }
+
+
+    public function openModal(){
+       $this->isOpen=true;
+    }
+
+    public function closeModal(){
+       $this->isOpen=false;
     }
 }
