@@ -16,7 +16,7 @@ new class extends Component
     }
 }; ?>
 
-<nav x-data="{ open: false }" class="transition duration-300 border-b border-white dark:border-zinc-800 bg-gray-50 dark:bg-zinc-900">
+<nav x-data="{ open: false }" class="transition duration-300 border-b border-white dark:border-zinc-800 bg-gray-50/50 dark:bg-zinc-900/50">
     <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">

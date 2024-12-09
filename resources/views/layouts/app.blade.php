@@ -10,17 +10,17 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
+<script src="./node_modules/preline/dist/preline.js"></script>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50 bg-gray-50">
-        <div class="relative min-h-screen dark:bg-black dark:text-white/50 bg-gray-50">
+    <body class="font-sans antialiased dark:bg-black backdrop-blur-lg dark:text-white/50 bg-gray-50">
+        <div class="relative min-h-screen dark:bg-black backdrop-blur-lg dark:text-white/50 bg-gray-50">
             <livewire:layout.navigation />
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="transition duration-300 border-zinc-900 dark:bg-zinc-900">
+                <header class="transition duration-300 border-zinc-900 backdrop-blur-xl dark:bg-zinc-900/50">
                     <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
