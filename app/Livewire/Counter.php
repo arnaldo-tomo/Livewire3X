@@ -22,9 +22,12 @@ class Counter extends Component
 
     public function render()
     {
-        $this->user= Produtos::where('name', 'like', '%' . $this->search . '%')
+
+        $this->user=Produtos::where('name', 'like', '%' . $this->search . '%')
         ->orWhere('category', 'like', '%' . $this->search . '%')
         ->get();
+
+
         return view('livewire.counter');
     }
 
