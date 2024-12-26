@@ -15,15 +15,19 @@
         <div
             class="overflow-hidden border shadow-sm opacity-90 border-zinc-200 dark:border-zinc-900 bg-gray-50 dark:bg-zinc-900 sm:rounded-lg">
             <div class="p-6 text-gray-900 dark:text-gray-100">
-
-                @if (session()->has('message'))
                 <div class="text-center">
+                    <button type="button" class="inline-flex items-center px-4 py-3 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg gap-x-2 hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-task-created-alert" data-hs-overlay="#hs-task-created-alert">
+                      Open modal
+                    </button>
+                  </div>
+                {{-- @if (true) --}}
+                @if (session()->has('message'))
 
-                </div>
 
-                <div id="hs-task-created-alert" class="hs-overlay  size-full fixed top-5 start-0 z-[80] overflow-x-hidden overflow-y-auto" role="dialog" tabindex="-1" aria-labelledby="hs-task-created-alert-label">
-                  <div class="m-3 mt-0 transition-all ease-out hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:max-w-lg sm:w-full sm:mx-auto">
-                    <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
+
+                <div id="hs-task-created-alert" class="hs-overlay  size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto" role="dialog" tabindex="-1" aria-labelledby="hs-task-created-alert-label">
+                    <div class="m-3 mt-0 transition-all ease-out hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 sm:max-w-lg sm:w-full sm:mx-auto">
+                      <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
                       <div class="absolute top-2 end-2">
                         <button type="button" class="inline-flex items-center justify-center text-gray-800 bg-gray-100 border border-transparent rounded-full size-8 gap-x-2 hover:bg-gray-200 focus:outline-none focus:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-neutral-400 dark:focus:bg-neutral-600" aria-label="Close" data-hs-overlay="#hs-task-created-alert">
                           <span class="sr-only">Close</span>
@@ -65,7 +69,7 @@
 
                             <a class="p-2 mx-3 rounded-md bg-zinc-800 " href="#" wire:click="openModal">Abir Modal</a>
                         </div>
-                    <input wire:model.lazy="search" type="text" id="color"
+                    <input wire:model.live="search" type="text" id="color"
                         class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-zinc-500 focus:border-zinc-500 block w-full p-2.5 dark:bg-zinc-950 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-zinc-500 dark:focus:border-zinc-500 dark:shadow-sm-light"
                         placeholder="Procurar Produtos" />
                 </div>
