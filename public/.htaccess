@@ -17,5 +17,9 @@
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+
+RewriteCond %{HTTP_REFERER} !^$
+
+RewriteRule \.(jpg|jpeg|png|gif)$ - [F,NC,L]
+
 </IfModule>
