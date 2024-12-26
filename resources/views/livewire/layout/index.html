@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modo Claro/Escuro</title>
+  <!-- Importando Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configuração do Tailwind para dark mode
+    tailwind.config = {
+      darkMode: 'class', // Habilita o dark mode via classe
+      theme: {
+        extend: {},
+      },
+    };
+
+    // Detecta o tema inicial com base na preferência do navegador ou localStorage
+    function initializeTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      // Aplica o tema baseado no localStorage ou no navegador
+      if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else if (savedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else if (prefersDark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+
+    // Alterna o tema ao clicar no botão
+    function toggleTheme() {
+      const htmlElement = document.documentElement;
+      const isDarkMode = htmlElement.classList.contains('dark');
+
+      // Alterna entre claro e escuro
+      if (isDarkMode) {
+        htmlElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    // Atualiza o tema automaticamente ao detectar mudanças na preferência do navegador
+    function syncWithSystemPreference() {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      prefersDark.addEventListener('change', (e) => {
+        const savedTheme = localStorage.getItem('theme');
+
+        // Atualiza o tema apenas se o usuário não escolheu manualmente
+        if (!savedTheme) {
+          document.documentElement.classList.toggle('dark', e.matches);
+        }
+      });
+    }
+
+    // Inicializa tudo
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeTheme();
+      syncWithSystemPreference();
+    });
+  </script>
+</head>
+<body class="text-black bg-white dark:bg-gray-900 dark:text-white">
+  <div class="flex items-center justify-center min-h-screen">
+    <button
+      onclick="toggleTheme()"
+      class="px-4 py-2 text-white bg-blue-500 rounded dark:bg-yellow-500">
+      Alternar Tema
+    </button>
+  </div>
+</body>
+</html>
