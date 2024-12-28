@@ -38,7 +38,7 @@ new class extends Component {
                        Contatos
                     </x-nav-link>
 
-                    <x-nav-link :href="URL('template')" :active="request()->routeIs('template')" wire:navigate>
+                    <x-nav-link :href="URL('Templates')" :active="request()->routeIs('Templates')" wire:navigate>
                         Templates
                     </x-nav-link>
 
