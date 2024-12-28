@@ -10,10 +10,12 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-<script src="./node_modules/preline/dist/preline.js"></script>
+        <script src="./assets/vendor/canvas-confetti/dist/confetti.browser.js"></script>
+         <script src="./node_modules/preline/dist/preline.js"></script>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
+
     <body class="font-sans antialiased dark:bg-black backdrop-blur-sm dark:text-white/50 bg-gray-50">
         <div class="relative min-h-screen dark:bg-black backdrop-blur-sm dark:text-white/50 bg-gray-50">
             <livewire:layout.navigation />
