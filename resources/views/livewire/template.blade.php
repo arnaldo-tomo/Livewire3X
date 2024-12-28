@@ -13,16 +13,6 @@
 
                     </div>
 
-                    <div class="flex justify-between w-full p-5 rounded-lg h-72 bg-zinc-900/10 backdrop-blur-sm">
-
-                        <div class="w-50 bg-zibnc md:w-full">
-                            Marcelino
-                        </div>
-                        <div class="w-50 md:w-full">
-                            Pedro
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>
