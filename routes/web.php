@@ -1,25 +1,26 @@
 <?php
 
 use App\Livewire\Campaign;
-use App\Livewire\Contact;
+use App\Livewire\Contact\Render;
 use App\Livewire\Counter;
 use App\Livewire\MailLog;
 use App\Livewire\Relatorio;
-use App\Livewire\Template;
+use App\Livewire\Template\TemplateController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::get('/Contact', Contact::class)
+Route::get('/Contact', Render::class)
 ->middleware(['auth'])
 ->name('Contact');
 
+Route::get('Templates',TemplateController::class)
+->middleware(['auth'])
+->name('Templates');
 
-Route::get('template', Template::class)
-    ->middleware(['auth'])
-    ->name('template');
+Route::get('template',);
 
 Route::get('campaign', Campaign::class)
     ->middleware(['auth'])
