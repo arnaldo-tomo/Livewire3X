@@ -1,29 +1,35 @@
 <?php
 
+use App\Livewire\Campaign;
+use App\Livewire\Contact;
 use App\Livewire\Counter;
+use App\Livewire\MailLog;
+use App\Livewire\Relatorio;
+use App\Livewire\Template;
 use Illuminate\Support\Facades\Route;
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('contact', 'livewire.contact')
-    ->middleware(['auth'])
-    ->name('contact');
+Route::get('/Contact', Contact::class)
+->middleware(['auth'])
+->name('Contact');
 
-Route::view('template', 'livewire.template')
+
+Route::get('template', Template::class)
     ->middleware(['auth'])
     ->name('template');
 
-Route::view('campaign', 'livewire.campaign')
+Route::get('campaign', Campaign::class)
     ->middleware(['auth'])
     ->name('campaign');
 
-Route::view('mail-log', 'livewire.mail-log')
+Route::get('mail-log', MailLog::class)
     ->middleware(['auth'])
     ->name('mail-log');
 
-Route::view('relatorio', 'livewire.relatorio')
+Route::get('relatorio', Relatorio::class)
     ->middleware(['auth'])
     ->name('relatorio');
 
