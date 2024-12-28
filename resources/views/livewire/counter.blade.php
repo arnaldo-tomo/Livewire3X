@@ -15,11 +15,7 @@
         <div
             class="overflow-hidden border shadow-sm opacity-90 border-zinc-200 dark:border-zinc-900 bg-gray-50 dark:bg-zinc-900 sm:rounded-lg">
             <div class="p-6 text-gray-900 dark:text-gray-100">
-                <div class="text-center">
-                    <button type="button" class="inline-flex items-center px-4 py-3 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg gap-x-2 hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-task-created-alert" data-hs-overlay="#hs-task-created-alert">
-                      Open modal
-                    </button>
-                  </div>
+
                 {{-- @if (true) --}}
                 @if (session()->has('message'))
 
@@ -197,7 +193,7 @@
         <div tabindex="-1" class="fixed top-40 right-[800px]">
             <div class="relative w-full max-w-md max-h-full p-4">
                 <div class="relative bg-white rounded-lg shadow-lg dark:bg-zinc-900">
-                    <button type="button"
+                    <button wire:click="closeModal" type="button"
                         class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                         data-modal-hide="popup-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
