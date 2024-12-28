@@ -72,10 +72,10 @@ class Counter extends Component
 
 
     public function openModal(){
-       $this->isOpen=true;
+        $this->isOpen = !$this->isOpen;
     }
 
     public function closeModal(){
-       $this->isOpen=false;
+        $this->isOpen = !$this->isOpen;
     }
 }
