@@ -19,7 +19,7 @@
                   </svg>
                   App Center
                 </button>
-                <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-48 hidden z-10 transition-[margin,opacity] opacity-0 duration-300 mb-2 bg-white shadow-md rounded-lg p-1 space-y-0.5 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-breadcrumb-dropdown">
+                <div class="hs-dropdown-menu hs-dropdown-open:opacity-100 w-48 hidden z-10 transition-[margin,opacity] opacity-0 duration-300 mb-2 bg-white/50 shadow-md rounded-lg p-1 space-y-0.5 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-breadcrumb-dropdown">
                   <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
                     Projects
                   </a>
@@ -38,9 +38,9 @@
           </ol>
     </x-slot>
 
-    <div class="py-12">
+    <div>
         <div class="relative mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="shadow-sm bg-white/50 backdrop-blur-lg dark:bg-zinc-900/50 sm:rounded-lg">
+            <div >
                 <div class="text-gray-900 dark:text-gray-100">
 
                 </div>
@@ -52,9 +52,9 @@
                         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
                             <!-- Card -->
                             <div
-                                class="flex flex-col p-4 border shadow-sm cursor-pointer bg-white/60 gap-y-3 lg:gap-y-5 md:p-5 rounded-xl dark:bg-neutral-900/60 dark:border-neutral-900">
+                                class="flex flex-col p-4 border shadow-sm cursor-pointer bg-white/50 gap-y-3 lg:gap-y-5 md:p-5 rounded-xl dark:bg-neutral-900/50 dark:border-neutral-900">
                                 <div class="inline-flex items-center justify-center">
-                                    <span class="inline-block bg-gray-500 rounded-full size-2 me-2"></span>
+                                    <span class="inline-block rounded-full bg-gray-500/50 size-2 me-2"></span>
                                     <span
                                         class="text-xs font-semibold text-gray-600 uppercase dark:text-neutral-400">Projects</span>
                                 </div>
@@ -92,7 +92,7 @@
 
                             <!-- Card -->
                             <div
-                                class="flex flex-col p-4 bg-white border shadow-sm gap-y-3 lg:gap-y-5 md:p-5 rounded-xl dark:bg-neutral-900 dark:border-neutral-900">
+                                class="flex flex-col p-4 border shadow-sm bg-white/50 gap-y-3 lg:gap-y-5 md:p-5 rounded-xl dark:bg-neutral-900/50 dark:border-neutral-900">
                                 <div class="inline-flex items-center justify-center">
                                     <span class="inline-block bg-green-500 rounded-full size-2 me-2"></span>
                                     <span
@@ -133,7 +133,7 @@
 
                             <!-- Card -->
                             <div
-                                class="flex flex-col p-4 bg-white border shadow-sm cursor-pointer gap-y-3 lg:gap-y-5 md:p-5 rounded-xl dark:bg-neutral-900 dark:border-neutral-900">
+                                class="flex flex-col p-4 border shadow-sm cursor-pointer bg-white/50 gap-y-3 lg:gap-y-5 md:p-5 rounded-xl dark:bg-neutral-900/50 dark:border-neutral-900">
                                 <div class="inline-flex items-center justify-center">
                                     <span class="inline-block bg-red-500 rounded-full size-2 me-2"></span>
                                     <span
@@ -183,7 +183,7 @@
                             <div class="-m-1.5 overflow-x-auto">
                                 <div class="p-1.5 min-w-full inline-block align-middle">
                                     <div
-                                        class="overflow-hidden bg-white border border-gray-200 rounded-md shadow-sm dark:bg-neutral-900/70 dark:border-neutral-700">
+                                        class="overflow-hidden border border-gray-200 rounded-md shadow-sm bg-white/50 dark:bg-neutral-900/50 dark:border-neutral-700">
                                         <!-- Header -->
                                         <div
                                             class="grid gap-3 px-6 py-4 border-b border-gray-200 md:flex md:justify-between md:items-center dark:border-neutral-700">
@@ -198,7 +198,7 @@
 
                                             <div>
                                                 <div class="inline-flex gap-x-2">
-                                                    <a class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm gap-x-2 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-900 dark:focus:bg-neutral-900"
+                                                    <a class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-900 border border-gray-200 rounded-lg shadow-sm bg-white/50 gap-x-2 hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-900 dark:focus:bg-neutral-900"
                                                         href="#">
                                                         View all
                                                     </a>
@@ -221,12 +221,12 @@
 
                                         <!-- Table -->
                                         <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
-                                            <thead class="bg-gray-50 dark:bg-neutral-900">
+                                            <thead class="bg-gray-50 dark:bg-neutral-900/50">
                                                 <tr>
                                                     <th scope="col" class="py-3 ps-6 text-start">
                                                         <label for="hs-at-with-checkboxes-main" class="flex">
                                                             <input type="checkbox"
-                                                                class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
+                                                                class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900/50 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
                                                                 id="hs-at-with-checkboxes-main">
                                                             <span class="sr-only">Checkbox</span>
                                                         </label>
@@ -287,7 +287,7 @@
                                                         <div class="py-3 ps-6">
                                                             <label for="hs-at-with-checkboxes-1" class="flex">
                                                                 <input type="checkbox"
-                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
+                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900/50 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
                                                                     id="hs-at-with-checkboxes-1">
                                                                 <span class="sr-only">Checkbox</span>
                                                             </label>
@@ -368,7 +368,7 @@
                                                         <div class="py-3 ps-6">
                                                             <label for="hs-at-with-checkboxes-2" class="flex">
                                                                 <input type="checkbox"
-                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
+                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900/50 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
                                                                     id="hs-at-with-checkboxes-2">
                                                                 <span class="sr-only">Checkbox</span>
                                                             </label>
@@ -449,7 +449,7 @@
                                                         <div class="py-3 ps-6">
                                                             <label for="hs-at-with-checkboxes-3" class="flex">
                                                                 <input type="checkbox"
-                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
+                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900/50 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
                                                                     id="hs-at-with-checkboxes-3">
                                                                 <span class="sr-only">Checkbox</span>
                                                             </label>
@@ -459,7 +459,7 @@
                                                         <div class="py-3 ps-6 lg:ps-3 xl:ps-0 pe-6">
                                                             <div class="flex items-center gap-x-3">
                                                                 <span
-                                                                    class="inline-flex items-center justify-center size-[38px] rounded-full bg-white border border-gray-300 dark:bg-neutral-900 dark:border-neutral-700">
+                                                                    class="inline-flex items-center justify-center size-[38px] rounded-full bg-white/50 border border-gray-300 dark:bg-neutral-900/50 dark:border-neutral-700">
                                                                     <span
                                                                         class="text-sm font-medium leading-none text-gray-900 dark:text-neutral-200">A</span>
                                                                 </span>
@@ -532,7 +532,7 @@
                                                         <div class="py-3 ps-6">
                                                             <label for="hs-at-with-checkboxes-4" class="flex">
                                                                 <input type="checkbox"
-                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
+                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900/50 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
                                                                     id="hs-at-with-checkboxes-4">
                                                                 <span class="sr-only">Checkbox</span>
                                                             </label>
@@ -613,7 +613,7 @@
                                                         <div class="py-3 ps-6">
                                                             <label for="hs-at-with-checkboxes-5" class="flex">
                                                                 <input type="checkbox"
-                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
+                                                                    class="text-blue-600 border-gray-300 rounded shrink-0 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900/50 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-900"
                                                                     id="hs-at-with-checkboxes-5">
                                                                 <span class="sr-only">Checkbox</span>
                                                             </label>
@@ -623,7 +623,7 @@
                                                         <div class="py-3 ps-6 lg:ps-3 xl:ps-0 pe-6">
                                                             <div class="flex items-center gap-x-3">
                                                                 <span
-                                                                    class="inline-flex items-center justify-center size-[38px] rounded-full bg-white border border-gray-300 dark:bg-neutral-900 dark:border-neutral-700">
+                                                                    class="inline-flex items-center justify-center size-[38px] rounded-full bg-white/50 border border-gray-300 dark:bg-neutral-900/50 dark:border-neutral-700">
                                                                     <span
                                                                         class="text-sm font-medium leading-none text-gray-900 dark:text-neutral-200">D</span>
                                                                 </span>
@@ -710,7 +710,7 @@
                                             <div>
                                                 <div class="inline-flex gap-x-2">
                                                     <button type="button"
-                                                        class="py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-900 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-900 dark:focus:bg-neutral-900">
+                                                        class="py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white/50 text-gray-900 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-900 dark:focus:bg-neutral-900">
                                                         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
                                                             width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                             stroke="currentColor" stroke-width="2"
@@ -721,7 +721,7 @@
                                                     </button>
 
                                                     <button type="button"
-                                                        class="py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-900 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-900 dark:focus:bg-neutral-900">
+                                                        class="py-1.5 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white/50 text-gray-900 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-900 dark:focus:bg-neutral-900">
                                                         Next
                                                         <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
                                                             width="24" height="24" viewBox="0 0 24 24" fill="none"
