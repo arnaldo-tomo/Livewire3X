@@ -10,6 +10,7 @@ export default {
     "node_modules/preline/dist/*.js"
   ],
 
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
