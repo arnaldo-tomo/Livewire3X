@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
+<html class="light" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head class="dark">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -14,9 +14,41 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         {{-- <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" /> --}}
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
+   {{-- Script que garante a persistência do tema entre navegações --}}
+   <script>
+    window.addEventListener('load', () => {
+      (function() {
+        const themeSwitches = document.querySelectorAll('#hs-theme-switch-to-destroy [data-hs-theme-click-value]');
+        const destroy = document.querySelector('#hs-destroy-theme-switch');
+        const autoInit = document.querySelector('#hs-auto-init-theme-switch');
+
+        destroy.addEventListener('click', () => {
+          themeSwitches.forEach((el) => {
+            const {element} = HSThemeSwitch.getInstance(el, true);
+
+            element.destroy();
+          });
+
+          destroy.setAttribute('disabled', 'disabled');
+          autoInit.removeAttribute('disabled');
+        });
+
+        autoInit.addEventListener('click', () => {
+          HSThemeSwitch.autoInit();
+
+          autoInit.setAttribute('disabled', 'disabled');
+          destroy.removeAttribute('disabled');
+        });
+      })();
+    });
+  </script>
     <body class="font-sans antialiased dark:bg-black backdrop-blur-lg dark:text-white/50 bg-gray-50">
         <div class="relative min-h-screen dark:bg-black backdrop-blur-lg dark:text-white/50 bg-gray-50">
             <livewire:layout.navigation />

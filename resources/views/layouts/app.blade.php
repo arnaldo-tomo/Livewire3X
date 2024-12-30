@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="light" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head class="dark">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,21 +12,42 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <script src="./assets/vendor/canvas-confetti/dist/confetti.browser.js"></script>
          <script src="./node_modules/preline/dist/preline.js"></script>
+         <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+       />
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <script>
-        // This code should be added to <head>.
-    // It's used to prevent page load glitches.
-    const html = document.querySelector('html');
-    const isLightOrAuto = localStorage.getItem('hs_theme') === 'light' || (localStorage.getItem('hs_theme') === 'auto' && !window.matchMedia('(prefers-color-scheme: dark)').matches);
-    const isDarkOrAuto = localStorage.getItem('hs_theme') === 'dark' || (localStorage.getItem('hs_theme') === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+   {{-- Script que garante a persistência do tema entre navegações --}}
+   <script>
+    window.addEventListener('load', () => {
+      (function() {
+        const themeSwitches = document.querySelectorAll('#hs-theme-switch-to-destroy [data-hs-theme-click-value]');
+        const destroy = document.querySelector('#hs-destroy-theme-switch');
+        const autoInit = document.querySelector('#hs-auto-init-theme-switch');
 
-    if (isLightOrAuto && html.classList.contains('dark')) html.classList.remove('dark');
-    else if (isDarkOrAuto && html.classList.contains('light')) html.classList.remove('light');
-    else if (isDarkOrAuto && !html.classList.contains('dark')) html.classList.add('dark');
-    else if (isLightOrAuto && !html.classList.contains('light')) html.classList.add('light');
-    </script>
+        destroy.addEventListener('click', () => {
+          themeSwitches.forEach((el) => {
+            const {element} = HSThemeSwitch.getInstance(el, true);
+
+            element.destroy();
+          });
+
+          destroy.setAttribute('disabled', 'disabled');
+          autoInit.removeAttribute('disabled');
+        });
+
+        autoInit.addEventListener('click', () => {
+          HSThemeSwitch.autoInit();
+
+          autoInit.setAttribute('disabled', 'disabled');
+          destroy.removeAttribute('disabled');
+        });
+      })();
+    });
+  </script>
     <body class="font-sans antialiased dark:bg-black backdrop-blur-sm dark:text-white/50 bg-gray-50">
         <div class="relative min-h-screen dark:bg-black backdrop-blur-sm dark:text-white/50 bg-gray-50">
             <livewire:layout.navigation />

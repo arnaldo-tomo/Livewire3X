@@ -1,10 +1,10 @@
 <div>
 
 @if($isclosed)
-<div class="grid place-content-center place-items-center">
+<div class="grid place-content-center place-items-center ">
 
 
- <div id="drawer-navigation" class="fixed bottom-0 rounded-xl overflow-y-auto  z-40 w-[70%] h-[800px]  p-4 transition-transform bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md  dark:border-neutral-700 overflow-hidden border border-gray-200 " tabindex="-1" aria-labelledby="drawer-navigation-label">
+ <div id="drawer-navigation" class="   animate__animated animate__bounceIn fixed bottom-0 rounded-xl overflow-y-auto  z-40 w-[70%] h-[800px]  p-4 transition-transform bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md  dark:border-neutral-700 overflow-hidden border border-gray-200 " tabindex="-1" aria-labelledby="drawer-navigation-label">
      <h5 id="drawer-navigation-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">Contactos</h5>
      <button  wire:click="toggle" type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 end-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" >
          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -160,7 +160,7 @@
         </ol>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 animate__animated animate__backInUp ">
         <div class="relative mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="shadow-sm bg-white/50 backdrop-blur-lg dark:bg-zinc-900/50 sm:rounded-lg">
                 <div class="flex flex-col">

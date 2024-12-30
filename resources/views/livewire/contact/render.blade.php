@@ -51,7 +51,7 @@
         </ol>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 animate__animated animate__backInUp">
         <div class="relative mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="shadow-sm bg-white/50 backdrop-blur-lg dark:bg-zinc-900/50 sm:rounded-lg">
                 <div class="flex flex-col">

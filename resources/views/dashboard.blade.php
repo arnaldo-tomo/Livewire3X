@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <ol class="flex items-center whitespace-nowrap">
+        <ol class="flex items-center whitespace-nowrap animate__animated animate__backInLeft">
             <li class="inline-flex items-center py-1.5 px-2">
               <a class="flex items-center text-sm text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-500 dark:hover:text-blue-500 dark:focus:text-blue-500" href="#">
                 Home
@@ -39,15 +39,10 @@
     </x-slot>
 
     <div>
-        <div class="relative mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="relative mx-auto max-w-7xl sm:px-6 lg:px-8 ">
             <div >
-                <div class="text-gray-900 dark:text-gray-100">
-
-                </div>
-
-
                     <!-- Card Section -->
-                    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto animate__animated animate__backInRight">
                         <!-- Grid -->
                         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
                             <!-- Card -->
@@ -177,7 +172,7 @@
                     <!-- End Card Section -->
 
                     <!-- Table Section -->
-                    <div class="max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-8  mx-auto">
+                    <div class="max-w-[85rem] px-4 pb-10 sm:px-6 lg:px-8  mx-auto animate__animated animate__backInUp ">
                         <!-- Card -->
                         <div class="flex flex-col">
                             <div class="-m-1.5 overflow-x-auto">
@@ -220,7 +215,7 @@
                                         <!-- End Header -->
 
                                         <!-- Table -->
-                                        <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+                                        <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700 ">
                                             <thead class="bg-gray-50 dark:bg-neutral-900/50">
                                                 <tr>
                                                     <th scope="col" class="py-3 ps-6 text-start">
